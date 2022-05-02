@@ -54,7 +54,7 @@ const BmiSection = () => {
 
   return (
     <section className="w-full flex flex-col  bg-[#ECFEFF] items-end relative">
-      {user.length ? (
+      {user?.length ? (
         <div
           style={
             show
@@ -118,13 +118,13 @@ const BmiSection = () => {
       </p>
       <div className="bg-[#ECFEFF] flex flex-wrap p-5 justify-center mt-12 w-full h-[500px]">
         <div className="flex flex-col  items-center  justify-center">
-          {user.length ? (
+          {user?.length ? (
             ""
           ) : (
             <p className="text-red-600 rounded-lg">برای محاسبه باید عضو شوید</p>
           )}
           <button
-            disabled={user.length ? false : true}
+            disabled={user?.length ? false : true}
             onClick={() => calculator()}
             className="w-[150px] bg-[#FDBA74] font-bold rounded-lg p-5"
           >
