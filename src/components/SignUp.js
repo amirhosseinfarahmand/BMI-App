@@ -44,6 +44,11 @@ const SignUp = () => {
   const [state, setState] = useState([]);
   console.log(user);
   const onSubmit = (values) => {
+    const item = {
+      name: values.name,
+      email: values.email,
+      password: values.password,
+    };
     setUser([
       {
         password: values.password,
@@ -51,21 +56,15 @@ const SignUp = () => {
         name: values.name,
       },
     ]);
-    localStorage.setItem(
-      "user",
-      JSON.stringify([
-        ...state,
-        { name: values.name, email: values.email, password: values.password },
-      ])
-    );
+    localStorage.setItem("user", JSON.stringify([...state, item]));
     setUser(values.name);
     navigate("/");
   };
 
-  useEffect(() => {
-    const save = JSON.parse(localStorage.getItem("user"));
-    setState(save);
-  }, [user]);
+  // useEffect(() => {
+  //   const save = JSON.parse(localStorage.getItem("user"));
+  //   setState(save);
+  // }, [user]);
 
   const formik = useFormik({
     initialValues,

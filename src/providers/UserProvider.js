@@ -5,7 +5,6 @@ const SetUserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState([]);
-  const [saveUser, setSaveUser] = useState([]);
   console.log(user);
   useEffect(() => {
     const save = JSON.parse(localStorage.getItem("new"));
@@ -13,7 +12,7 @@ const UserProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (user.length) {
+    if (user?.length) {
       localStorage.setItem("new", JSON.stringify(user));
     }
   }, [user]);

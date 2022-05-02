@@ -1,5 +1,4 @@
 const Input = ({ formik, name, label, type }) => {
-  console.log(formik.errors[name]);
   return (
     <div className="" style={{ marginTop: "10px" }}>
       <div>

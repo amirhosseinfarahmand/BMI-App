@@ -10,12 +10,17 @@ const Main = () => {
   const user = useUser();
   const setUser = useUserAction();
 
+  const exit = () => {
+    localStorage.removeItem("new");
+    setUser([]);
+  };
+
   return (
     <main
       className="bg-[#ECFEFF] flex flex-wrap justify-center w-full relative"
       onMouseEnter={() => setShow(false)}
     >
-      {user.length ? (
+      {user?.length ? (
         <div
           style={
             show
@@ -30,7 +35,7 @@ const Main = () => {
           onMouseEnter={() => setShow(true)}
           onMouseLeave={() => setShow(false)}
         >
-          <p onClick={() => setUser([])} className="cursor-pointer">
+          <p onClick={() => exit()} className="cursor-pointer">
             {" "}
             خروج
           </p>

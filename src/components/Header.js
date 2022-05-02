@@ -24,7 +24,7 @@ const Header = () => {
           className="bg-[#2DD4BF] rounded-md p-3 flex items-center"
           onMouseEnter={() => setShow(true)}
         >
-          {user.length ? user : "ورود/عضویت"}
+          {user?.length ? user : "ورود/عضویت"}
         </p>
 
         <p className="bg-[#2DD4BF] rounded-md flex items-center">

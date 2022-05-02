@@ -10,7 +10,7 @@ const Footer = () => {
         <ul className="text-center mt-2 flex justify-evenly">
           <li>
             <svg
-              class="w-10  h-10  text-blue-600 fill-current"
+              className="w-10  h-10  text-blue-600 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -19,7 +19,7 @@ const Footer = () => {
           </li>
           <li>
             <svg
-              class="w-10 h-10 text-blue-300 fill-current"
+              className="w-10 h-10 text-blue-300 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -28,7 +28,7 @@ const Footer = () => {
           </li>
           <li>
             <svg
-              class="w-10 h-10 text-green-400 fill-current"
+              className="w-10 h-10 text-green-400 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
@@ -37,7 +37,7 @@ const Footer = () => {
           </li>
           <li>
             <svg
-              class="w-10 h-10  text-blue-400 fill-current"
+              className="w-10 h-10  text-blue-400 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
             >

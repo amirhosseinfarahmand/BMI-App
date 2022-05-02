@@ -2,10 +2,11 @@ import React from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import Input from "../common/Input";
-import { useState, useEffect } from "react";
 import { useUser, useUserAction } from "../providers/UserProvider";
 import { useShowAction } from "../providers/ShowProvider";
 import { useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initialValues = {
   email: "",
@@ -35,6 +36,8 @@ const Login = () => {
     if (find) {
       setLogin(find.name);
       navigate("/");
+    } else {
+      return toast.error("ایمیل یا پسورد اشتباه است");
     }
   };
 
@@ -50,6 +53,7 @@ const Login = () => {
       className="flex flex-col mt-[100px] justify-center items-center"
       onMouseEnter={() => setShow(false)}
     >
+      <ToastContainer />
       <div className="bg-[#F5F5F4] p-5 rounded-lg relative">
         <p
           className="text-center text-[25px]"
