@@ -152,7 +152,7 @@ const BmiSection = () => {
         <div className="table w-[350px] sm:ml-[20px] ">
           {bmiNumber ? (
             <table class="w-full text-sm text-left text-gray-500 ">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase ">
                 <tr className="border-gray-300 border-b bg-[#2DD4BF]">
                   <th scope="col" class="px-9 text-center py-3 ">
                     BMI
@@ -166,17 +166,17 @@ const BmiSection = () => {
                 <tr
                   class={`${
                     bmiNumber < 18.5 ? hover : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700`}
+                  } border-b border-gray-300  `}
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 text-center font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    class="px-6 py-4 text-center font-medium text-gray-900  whitespace-nowrap"
                   >
                     {`BMI≤ 18.5`}
                   </th>
                   <th
                     scope="row"
-                    class="px-6 text-center py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    class="px-6 text-center py-4 font-medium text-gray-900  whitespace-nowrap"
                   >
                     لاغر
                   </th>
@@ -186,7 +186,7 @@ const BmiSection = () => {
                     18.5 < bmiNumber && bmiNumber < 24.9
                       ? hover
                       : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700`}
+                  } border-b border-gray-300  `}
                 >
                   <th
                     scope="row"
@@ -201,7 +201,7 @@ const BmiSection = () => {
                     24.9 < bmiNumber && bmiNumber < 29.9
                       ? hover
                       : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700`}
+                  } border-b border-gray-300  `}
                 >
                   <th
                     scope="row"
@@ -216,11 +216,11 @@ const BmiSection = () => {
                     29.9 < bmiNumber && bmiNumber < 34.9
                       ? hover
                       : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:border-gray-700`}
+                  } border-b border-gray-300 `}
                 >
                   <th
                     scope="row"
-                    class="px-6 text-center py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    class="px-6 text-center py-4 font-medium text-gray-900  whitespace-nowrap"
                   >
                     {`29.9<BMI≤34.9`}
                   </th>
@@ -236,11 +236,11 @@ const BmiSection = () => {
                     34.9 < bmiNumber && bmiNumber < 39.9
                       ? hover
                       : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:border-gray-700`}
+                  } border-b border-gray-300 `}
                 >
                   <th
                     scope="row"
-                    class="px-6 text-center py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    class="px-6 text-center py-4 font-medium text-gray-900  whitespace-nowrap"
                   >
                     {`34.9<BMI≤39.9`}
                   </th>
@@ -254,11 +254,11 @@ const BmiSection = () => {
                 <tr
                   class={`${
                     39.9 < bmiNumber ? hover : "bg-[#CCFBF1]"
-                  } border-b border-gray-300 dark:border-gray-700`}
+                  } border-b border-gray-300 `}
                 >
                   <th
                     scope="row"
-                    class="px-6 text-center  py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    class="px-6 text-center  py-4 font-medium text-gray-900  whitespace-nowrap"
                   >
                     {`BMI>39`}
                   </th>
